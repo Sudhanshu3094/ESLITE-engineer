@@ -1,0 +1,47 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+*{
+    font-family: Outfit;
+}
+.active hr{
+    @apply block
+}
+::-webkit-scrollbar{
+    @apply hidden
+}
+ @media (max-width:740px){
+    .active p{
+        @apply text-white bg-red-800
+    }
+ }
+ */
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Load Tailwind */
+@import "tailwindcss";
+
+/* Global font */
+* {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* For .active hr */
+.active hr {
+  @apply block;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  @apply hidden;
+}
+
+/* Responsive styles must be inside @layer */
+@layer utilities {
+  @media (max-width: 740px) {
+    .active p {
+      @apply text-white bg-red-800;
+    }
+  }
+}
